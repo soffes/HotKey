@@ -111,9 +111,7 @@ final class HotKeysController {
 		if error != noErr {
 			return error
 		}
-
-		print("hotKeyID: \(hotKeyID.signature), \(hotKeyID.id)")
-
+		
 		guard hotKeyID.signature == eventHotKeySignature,
 			let hotKey = self.hotKey(for: hotKeyID.id)
 		else {

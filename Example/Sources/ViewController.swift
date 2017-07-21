@@ -16,7 +16,7 @@ final class ViewController: NSViewController {
 
 	@IBOutlet var pressedLabel: NSTextField!
 
-	private let hotKey = HotKey(keyCombo: KeyCombo(carbonKeyCode: UInt32(kVK_ANSI_R), carbonModifiers: UInt32(cmdKey|optionKey)))
+	private let hotKey = HotKey(keyCombo: KeyCombo(carbonKeyCode: UInt32(kVK_ANSI_R), modifiers: [.command, .option]))
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

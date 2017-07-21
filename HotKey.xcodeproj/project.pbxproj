@@ -19,6 +19,7 @@
 		21887E8E1F22156900A05579 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21887E881F22156900A05579 /* Main.storyboard */; };
 		21887E931F22158000A05579 /* HotKey.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21887E361F2209DE00A05579 /* HotKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		21887E951F22159100A05579 /* HotKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21887E361F2209DE00A05579 /* HotKey.framework */; };
+		21887E971F221E8D00A05579 /* NSEventModifierFlags+HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21887E961F221E8D00A05579 /* NSEventModifierFlags+HotKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		21887E871F22156900A05579 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21887E891F22156900A05579 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21887E8A1F22156900A05579 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21887E961F221E8D00A05579 /* NSEventModifierFlags+HotKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSEventModifierFlags+HotKey.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				21887E5B1F220A4300A05579 /* KeyCombo.swift */,
 				21887E5D1F220AF200A05579 /* HotKey.swift */,
 				21887E601F220F3300A05579 /* HotKeysController.swift */,
+				21887E961F221E8D00A05579 /* NSEventModifierFlags+HotKey.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			files = (
 				21887E611F220F3300A05579 /* HotKeysController.swift in Sources */,
 				21887E5C1F220A4300A05579 /* KeyCombo.swift in Sources */,
+				21887E971F221E8D00A05579 /* NSEventModifierFlags+HotKey.swift in Sources */,
 				21887E5E1F220AF200A05579 /* HotKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,6 +608,7 @@
 				21887E7E1F22154600A05579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

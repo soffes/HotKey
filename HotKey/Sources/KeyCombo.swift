@@ -6,12 +6,24 @@
 //  Copyright © 2017 Sam Soffes. All rights reserved.
 //
 
+import AppKit
+
 public struct KeyCombo {
 
 	// MARK: - Properties
 
 	public var carbonKeyCode: UInt32
 	public var carbonModifiers: UInt32
+
+	public var modifiers: NSEventModifierFlags {
+		get {
+			return NSEventModifierFlags(carbonFlags: carbonModifiers)
+		}
+
+		set {
+			carbonModifiers = modifiers.carbonFlags
+		}
+	}
 
 	public var isValid: Bool {
 		return carbonKeyCode >= 0 && carbonModifiers > 0
@@ -23,6 +35,11 @@ public struct KeyCombo {
 	public init(carbonKeyCode: UInt32, carbonModifiers: UInt32) {
 		self.carbonKeyCode = carbonKeyCode
 		self.carbonModifiers = carbonModifiers
+	}
+
+	public init(carbonKeyCode: UInt32, modifiers: NSEventModifierFlags) {
+		self.carbonKeyCode = carbonKeyCode
+		self.carbonModifiers = modifiers.carbonFlags
 	}
 }
 
