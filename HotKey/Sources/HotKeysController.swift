@@ -73,18 +73,23 @@ final class HotKeysController {
 			return
 		}
 
+		// Store the event so we can unregister it later
 		box.carbonEventHotKey = eventHotKey
 
+		// Setup the event handler if needed
 		updateEventHandler()
 	}
 
 	static func unregister(_ hotKey: HotKey) {
+		// Find the box
 		guard let box = self.box(for: hotKey) else {
 			return
 		}
 
+		// Unregister the hot key
 		UnregisterEventHotKey(box.carbonEventHotKey)
 
+		// Destroy the box
 		box.hotKey = nil
 		hotKeys.removeValue(forKey: box.carbonHotKeyID)
 	}
@@ -92,11 +97,13 @@ final class HotKeysController {
 
 	// MARK: - Events
 
-	static func sendCarbonEvent(_ event: EventRef?) -> OSStatus {
+	static func handleCarbonEvent(_ event: EventRef?) -> OSStatus {
+		// Ensure we have an event
 		guard let event = event else {
 			return OSStatus(eventNotHandledErr)
 		}
 
+		// Get the hot key ID from the event
 		var hotKeyID = EventHotKeyID()
 		let error = GetEventParameter(
 			event,
@@ -111,23 +118,31 @@ final class HotKeysController {
 		if error != noErr {
 			return error
 		}
-		
+
+		// Ensure we have a HotKey registered for this ID
 		guard hotKeyID.signature == eventHotKeySignature,
 			let hotKey = self.hotKey(for: hotKeyID.id)
 		else {
 			return OSStatus(eventNotHandledErr)
 		}
 
+		// Call the handler
 		switch GetEventKind(event) {
 		case UInt32(kEventHotKeyPressed):
-			hotKey.keyDownHandler?()
+			if let handler = hotKey.keyDownHandler {
+				handler()
+				return noErr
+			}
 		case UInt32(kEventHotKeyReleased):
-			hotKey.keyUpHandler?()
+			if let handler = hotKey.keyUpHandler {
+				handler()
+				return noErr
+			}
 		default:
-			return OSStatus(eventNotHandledErr)
+			break
 		}
 
-		return noErr
+		return OSStatus(eventNotHandledErr)
 	}
 
 	private static func updateEventHandler() {
@@ -135,11 +150,13 @@ final class HotKeysController {
 			return
 		}
 
+		// Register for key down and key up
 		let eventSpec = [
 			EventTypeSpec(eventClass: OSType(kEventClassKeyboard), eventKind: UInt32(kEventHotKeyPressed)),
 			EventTypeSpec(eventClass: OSType(kEventClassKeyboard), eventKind: UInt32(kEventHotKeyReleased))
 		]
 
+		// Install the handler
 		InstallEventHandler(GetEventDispatcherTarget(), hotKeyEventHandler, 2, eventSpec, nil, &eventHandler)
 	}
 
@@ -168,5 +185,5 @@ final class HotKeysController {
 
 
 private func hotKeyEventHandler(eventHandlerCall: EventHandlerCallRef?, event: EventRef?, userData: UnsafeMutableRawPointer?) -> OSStatus {
-	return HotKeysController.sendCarbonEvent(event)
+	return HotKeysController.handleCarbonEvent(event)
 }
