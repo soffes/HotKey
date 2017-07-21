@@ -12,6 +12,7 @@ Simple global shortcuts in macOS. HotKey wraps the Carbon APIs for dealing with 
 Simply initlaize a `HotKey` with a key and modifiers:
 
 ```swift
+// Setup hot key for ⌥⌘R
 let hotKey = HotKey(key: .r, modifiers: [.command, .option])
 ```
 
