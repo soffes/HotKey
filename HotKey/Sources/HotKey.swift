@@ -12,25 +12,21 @@ public final class HotKey {
 
 	// MARK: - Types
 
-	public enum Kind {
-		case keyDown
-		case keyUp
-	}
-
-	public typealias Handler = (Kind) -> Void
-
+	public typealias Handler = () -> Void
 
 	// MARK: - Properties
 
 	public let keyCombo: KeyCombo
-	public var handler: Handler
+	public var keyDownHandler: Handler?
+	public var keyUpHandler: Handler?
 
 
 	// MARK: - Initializers
 
-	public init(keyCombo: KeyCombo, handler: @escaping Handler) {
+	public init(keyCombo: KeyCombo, keyDownHandler: Handler? = nil, keyUpHandler: Handler? = nil) {
 		self.keyCombo = keyCombo
-		self.handler = handler
+		self.keyDownHandler = keyDownHandler
+		self.keyUpHandler = keyUpHandler
 
 		HotKeysController.register(self)
 	}

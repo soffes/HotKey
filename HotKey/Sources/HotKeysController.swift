@@ -97,13 +97,13 @@ final class HotKeysController {
 			return OSStatus(eventNotHandledErr)
 		}
 
-		var hotKeyID: EventHotKeyID?
+		var hotKeyID = EventHotKeyID()
 		let error = GetEventParameter(
 			event,
 			UInt32(kEventParamDirectObject),
 			UInt32(typeEventHotKeyID),
 			nil,
-			MemoryLayout.size(ofValue: EventHotKeyID.self),
+			MemoryLayout<EventHotKeyID>.size,
 			nil,
 			&hotKeyID
 		)
@@ -112,19 +112,19 @@ final class HotKeysController {
 			return error
 		}
 
-		guard let carbonHotKeyID = hotKeyID?.id,
-			carbonHotKeyID != 0,
-			hotKeyID?.signature != eventHotKeySignature,
-			let hotKey = self.hotKey(for: carbonHotKeyID)
+		print("hotKeyID: \(hotKeyID.signature), \(hotKeyID.id)")
+
+		guard hotKeyID.signature == eventHotKeySignature,
+			let hotKey = self.hotKey(for: hotKeyID.id)
 		else {
 			return OSStatus(eventNotHandledErr)
 		}
 
 		switch GetEventKind(event) {
 		case UInt32(kEventHotKeyPressed):
-			hotKey.handler(.keyDown)
+			hotKey.keyDownHandler?()
 		case UInt32(kEventHotKeyReleased):
-			hotKey.handler(.keyUp)
+			hotKey.keyUpHandler?()
 		default:
 			return OSStatus(eventNotHandledErr)
 		}
