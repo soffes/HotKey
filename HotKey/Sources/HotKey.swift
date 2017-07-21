@@ -6,6 +6,7 @@
 //  Copyright © 2017 Sam Soffes. All rights reserved.
 //
 
+import AppKit
 import Carbon
 
 public final class HotKey {
@@ -14,6 +15,7 @@ public final class HotKey {
 
 	public typealias Handler = () -> Void
 
+	
 	// MARK: - Properties
 
 	public let keyCombo: KeyCombo
@@ -29,6 +31,16 @@ public final class HotKey {
 		self.keyUpHandler = keyUpHandler
 
 		HotKeysController.register(self)
+	}
+
+	public convenience init(carbonKeyCode: UInt32, carbonModifiers: UInt32, keyDownHandler: Handler? = nil, keyUpHandler: Handler? = nil) {
+		let keyCombo = KeyCombo(carbonKeyCode: carbonKeyCode, carbonModifiers: carbonModifiers)
+		self.init(keyCombo: keyCombo, keyDownHandler: keyDownHandler, keyUpHandler: keyUpHandler)
+	}
+
+	public convenience init(carbonKeyCode: UInt32, modifiers: NSEventModifierFlags, keyDownHandler: Handler? = nil, keyUpHandler: Handler? = nil) {
+		let keyCombo = KeyCombo(carbonKeyCode: carbonKeyCode, modifiers: modifiers)
+		self.init(keyCombo: keyCombo, keyDownHandler: keyDownHandler, keyUpHandler: keyUpHandler)
 	}
 
 	deinit {

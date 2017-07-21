@@ -12,8 +12,7 @@ Simple global shortcuts in macOS. HotKey wraps the Carbon APIs for dealing with 
 Simply initlaize a `HotKey` with a `KeyCombo`:
 
 ```swift
-let keyCombo = KeyCombo(carbonKeyCode: UInt32(kVK_ANSI_R), modifiers: [.command, .option])
-let hotKey = HotKey(keyCombo: keyCombo)
+let hotKey = HotKey(carbonKeyCode: UInt32(kVK_ANSI_R), modifiers: [.command, .option])
 ```
 
 Now you can get callbacks for when it is pressed:
