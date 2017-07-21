@@ -1,6 +1,6 @@
 # HotKey
 
-[![Version](https://img.shields.io/github/release/soffes/Color.svg)](https://github.com/soffes/Color/releases)
+[![Version](https://img.shields.io/github/release/soffes/HotKey.svg)](https://github.com/soffes/HotKey/releases)
 ![Swift Version](https://img.shields.io/badge/swift-3.1-orange.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
