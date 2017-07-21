@@ -38,8 +38,8 @@ public final class HotKey {
 		self.init(keyCombo: keyCombo, keyDownHandler: keyDownHandler, keyUpHandler: keyUpHandler)
 	}
 
-	public convenience init(carbonKeyCode: UInt32, modifiers: NSEventModifierFlags, keyDownHandler: Handler? = nil, keyUpHandler: Handler? = nil) {
-		let keyCombo = KeyCombo(carbonKeyCode: carbonKeyCode, modifiers: modifiers)
+	public convenience init(key: Key, modifiers: NSEventModifierFlags, keyDownHandler: Handler? = nil, keyUpHandler: Handler? = nil) {
+		let keyCombo = KeyCombo(key: key, modifiers: modifiers)
 		self.init(keyCombo: keyCombo, keyDownHandler: keyDownHandler, keyUpHandler: keyUpHandler)
 	}
 

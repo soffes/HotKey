@@ -9,13 +9,15 @@ Simple global shortcuts in macOS. HotKey wraps the Carbon APIs for dealing with 
 
 ## Usage
 
-Simply initlaize a `HotKey` with a `KeyCombo`:
+Simply initlaize a `HotKey` with a key and modifiers:
 
 ```swift
-let hotKey = HotKey(carbonKeyCode: UInt32(kVK_ANSI_R), modifiers: [.command, .option])
+let hotKey = HotKey(key: .r, modifiers: [.command, .option])
 ```
 
-Now you can get callbacks for when it is pressed:
+This is a convenice initializer that creates a `KeyCombo` for you. You can also initialize with a Carbon key code and Carbon modifier flags if you’re feeling old school.
+
+Now you can set the `keyDownHandler` and get callbacks for when your hot key is pressed:
 
 ```swift
 hotKey.keyDownHandler = {

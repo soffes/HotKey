@@ -15,6 +15,17 @@ public struct KeyCombo {
 	public var carbonKeyCode: UInt32
 	public var carbonModifiers: UInt32
 
+	public var key: Key? {
+		get {
+			return Key(carbonKeyCode: carbonKeyCode)
+		}
+
+		set {
+			guard let key = newValue else { return }
+			carbonKeyCode = key.carbonKeyCode
+		}
+	}
+
 	public var modifiers: NSEventModifierFlags {
 		get {
 			return NSEventModifierFlags(carbonFlags: carbonModifiers)
@@ -37,10 +48,18 @@ public struct KeyCombo {
 		self.carbonModifiers = carbonModifiers
 	}
 
-	public init(carbonKeyCode: UInt32, modifiers: NSEventModifierFlags) {
-		self.carbonKeyCode = carbonKeyCode
+	public init(key: Key, modifiers: NSEventModifierFlags) {
+		self.carbonKeyCode = key.carbonKeyCode
 		self.carbonModifiers = modifiers.carbonFlags
 	}
+
+
+	// MARK: - Converting Keys
+
+	public static func carbonKeyCodeToString(_ carbonKeyCode: UInt32) -> String? {
+		return nil
+	}
+
 }
 
 
