@@ -11,7 +11,7 @@
 		21887E551F220A1500A05579 /* HotKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 21887E521F220A1500A05579 /* HotKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21887E5C1F220A4300A05579 /* KeyCombo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21887E5B1F220A4300A05579 /* KeyCombo.swift */; };
 		21887E5E1F220AF200A05579 /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21887E5D1F220AF200A05579 /* HotKey.swift */; };
-		21887E5F1F220BE400A05579 /* HotKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21887E591F220A1B00A05579 /* HotKeyTests.swift */; };
+		21887E5F1F220BE400A05579 /* KeyComboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21887E591F220A1B00A05579 /* KeyComboTests.swift */; };
 		21887E611F220F3300A05579 /* HotKeysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21887E601F220F3300A05579 /* HotKeysController.swift */; };
 		21887E8B1F22156900A05579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21887E841F22156900A05579 /* AppDelegate.swift */; };
 		21887E8C1F22156900A05579 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21887E851F22156900A05579 /* ViewController.swift */; };
@@ -60,7 +60,7 @@
 		21887E521F220A1500A05579 /* HotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotKey.h; sourceTree = "<group>"; };
 		21887E531F220A1500A05579 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21887E541F220A1500A05579 /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		21887E591F220A1B00A05579 /* HotKeyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotKeyTests.swift; sourceTree = "<group>"; };
+		21887E591F220A1B00A05579 /* KeyComboTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyComboTests.swift; sourceTree = "<group>"; };
 		21887E5B1F220A4300A05579 /* KeyCombo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyCombo.swift; sourceTree = "<group>"; };
 		21887E5D1F220AF200A05579 /* HotKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotKey.swift; sourceTree = "<group>"; };
 		21887E601F220F3300A05579 /* HotKeysController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotKeysController.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 		21887E581F220A1B00A05579 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				21887E591F220A1B00A05579 /* HotKeyTests.swift */,
+				21887E591F220A1B00A05579 /* KeyComboTests.swift */,
 			);
 			name = Tests;
 			path = Tests/HotKeyTests;
@@ -345,7 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21887E5F1F220BE400A05579 /* HotKeyTests.swift in Sources */,
+				21887E5F1F220BE400A05579 /* KeyComboTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +528,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = HotKeyTests/Info.plist;
+				INFOPLIST_FILE = "HotKey/Support/Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.HotKeyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -541,7 +541,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = HotKeyTests/Info.plist;
+				INFOPLIST_FILE = "HotKey/Support/Tests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.HotKeyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -71,7 +71,7 @@ extension KeyCombo {
 	}
 
 	public init?(dictionary: [String: Any]) {
-		guard let keyCode = dictionary["keyCod"] as? Int,
+		guard let keyCode = dictionary["keyCode"] as? Int,
 			let modifiers = dictionary["modifiers"] as? Int
 		else {
 			return nil
