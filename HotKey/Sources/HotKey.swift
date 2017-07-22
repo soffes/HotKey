@@ -21,6 +21,7 @@ public final class HotKey {
 	public let keyCombo: KeyCombo
 	public var keyDownHandler: Handler?
 	public var keyUpHandler: Handler?
+	public var isPaused = false
 
 
 	// MARK: - Initializers

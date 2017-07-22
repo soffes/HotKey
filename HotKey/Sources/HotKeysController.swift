@@ -129,12 +129,12 @@ final class HotKeysController {
 		// Call the handler
 		switch GetEventKind(event) {
 		case UInt32(kEventHotKeyPressed):
-			if let handler = hotKey.keyDownHandler {
+			if !hotKey.isPaused, let handler = hotKey.keyDownHandler {
 				handler()
 				return noErr
 			}
 		case UInt32(kEventHotKeyReleased):
-			if let handler = hotKey.keyUpHandler {
+			if !hotKey.isPaused, let handler = hotKey.keyUpHandler {
 				handler()
 				return noErr
 			}
