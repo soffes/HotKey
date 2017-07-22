@@ -1,6 +1,7 @@
 # HotKey
 
 [![Version](https://img.shields.io/github/release/soffes/HotKey.svg)](https://github.com/soffes/HotKey/releases)
+[![Build Status](https://travis-ci.org/soffes/HotKey.svg?branch=master)](https://travis-ci.org/soffes/HotKey)
 ![Swift Version](https://img.shields.io/badge/swift-3.1-orange.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 

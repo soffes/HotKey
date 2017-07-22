@@ -1,0 +1,4 @@
+osx_image: xcode8.3
+language: objective-c
+install: gem install xcpretty
+script: xcodebuild test -project HotKey.xcodeproj -scheme HotKey | xcpretty --color; exit ${PIPESTATUS[0]}
