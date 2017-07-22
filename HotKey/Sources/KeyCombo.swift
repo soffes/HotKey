@@ -59,7 +59,26 @@ public struct KeyCombo {
 	public static func carbonKeyCodeToString(_ carbonKeyCode: UInt32) -> String? {
 		return nil
 	}
+}
 
+
+extension KeyCombo {
+	public var dictionary: [String: Any] {
+		return [
+			"keyCode": Int(carbonKeyCode),
+			"modifiers": Int(carbonModifiers)
+		]
+	}
+
+	public init?(dictionary: [String: Any]) {
+		guard let keyCode = dictionary["keyCod"] as? Int,
+			let modifiers = dictionary["modifiers"] as? Int
+		else {
+			return nil
+		}
+
+		self.init(carbonKeyCode: UInt32(keyCode), carbonModifiers: UInt32(modifiers))
+	}
 }
 
 
