@@ -124,17 +124,17 @@ public enum Key: String {
 	case downArrow = "downarrow"
 	case upArrow = "uparrow"
 	
-	static var keyCodeToKeyMappings: [Key : UInt] = {
-		var dict: [Key : UInt] = []
+	static var keyCodeToKeyMappings: [UInt : Key] = {
+		var dict: [Key : UInt] = [:]
 		
-		for (key, value) in self.keyToKeyCodeMappings {
+		for (key, value) in Key.keyToKeyCodeMappings {
 			dict[value] = key
 		}
 		
 		return dict
 	}()
 	
-	static let keyToKeyCodeMappings: [UInt : Key] =  [
+	static let keyToKeyCodeMappings: [Key : UInt] =  [
 		.a: UInt32(kVK_ANSI_A),
 		.s: UInt32(kVK_ANSI_S),
 		.d: UInt32(kVK_ANSI_D),
@@ -290,7 +290,7 @@ public enum Key: String {
 	}
 
 	public init?(carbonKeyCode: UInt32) {
-		return Key.keyCodeToKeyMappings[carbonKeyCode]
+		self = Key.keyCodeToKeyMappings[carbonKeyCode]
 	}
 	
 	public var carbonKeyCode: UInt32 {
