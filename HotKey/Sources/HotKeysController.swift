@@ -13,11 +13,13 @@ final class HotKeysController {
 	// MARK: - Types
 
 	final class HotKeyBox {
+		let identifier: UUID
 		weak var hotKey: HotKey?
 		let carbonHotKeyID: UInt32
 		var carbonEventHotKey: EventHotKeyRef?
 
 		init(hotKey: HotKey, carbonHotKeyID: UInt32) {
+			self.identifier = hotKey.identifier
 			self.hotKey = hotKey
 			self.carbonHotKeyID = carbonHotKeyID
 		}
@@ -174,7 +176,7 @@ final class HotKeysController {
 
 	private static func box(for hotKey: HotKey) -> HotKeyBox? {
 		for box in hotKeys.values {
-			if box.hotKey === hotKey {
+			if box.identifier == hotKey.identifier {
 				return box
 			}
 		}

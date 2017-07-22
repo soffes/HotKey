@@ -18,6 +18,8 @@ public final class HotKey {
 	
 	// MARK: - Properties
 
+	let identifier = UUID()
+
 	public let keyCombo: KeyCombo
 	public var keyDownHandler: Handler?
 	public var keyUpHandler: Handler?

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -686,25 +685,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="160"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAP-wl-S8A">
-                                <rect key="frame" x="18" y="123" width="213" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAP-wl-S8A">
+                                <rect key="frame" x="18" y="123" width="78" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Press ⌥⌘R" id="Q2M-rl-4ji">
                                     <font key="font" metaFont="systemBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGP-RG-aDC">
-                                <rect key="frame" x="18" y="88" width="298" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGP-RG-aDC">
+                                <rect key="frame" x="18" y="88" width="444" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Never pressed" id="K3W-VX-7rM">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ekV-s8-um3">
+                                <rect key="frame" x="14" y="13" width="104" height="32"/>
+                                <buttonCell key="cell" type="push" title="Unregister" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="B4a-Ny-aV4">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="unregister:" target="XfG-lQ-9wD" id="Dyb-fT-fYx"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SKe-kL-Skg">
+                                <rect key="frame" x="118" y="13" width="90" height="32"/>
+                                <buttonCell key="cell" type="push" title="Register" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JmQ-cN-BDk">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="register:" target="XfG-lQ-9wD" id="bJg-H3-05A"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="OGP-RG-aDC" firstAttribute="leading" secondItem="VAP-wl-S8A" secondAttribute="leading" id="4tH-E2-6qt"/>
+                            <constraint firstItem="ekV-s8-um3" firstAttribute="leading" secondItem="OGP-RG-aDC" secondAttribute="leading" id="8LK-DY-qH5"/>
+                            <constraint firstItem="SKe-kL-Skg" firstAttribute="leading" secondItem="ekV-s8-um3" secondAttribute="trailing" constant="12" id="8rs-R5-8C4"/>
+                            <constraint firstItem="VAP-wl-S8A" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="ECf-uO-j5P"/>
+                            <constraint firstItem="SKe-kL-Skg" firstAttribute="top" secondItem="ekV-s8-um3" secondAttribute="top" id="IlO-kX-1cY"/>
+                            <constraint firstAttribute="trailing" secondItem="OGP-RG-aDC" secondAttribute="trailing" constant="20" id="L9H-c0-tyH"/>
+                            <constraint firstItem="VAP-wl-S8A" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="LZg-Gv-SHB"/>
+                            <constraint firstAttribute="bottom" secondItem="ekV-s8-um3" secondAttribute="bottom" constant="20" id="Lhg-Xk-cZ3"/>
+                            <constraint firstItem="ekV-s8-um3" firstAttribute="top" secondItem="OGP-RG-aDC" secondAttribute="bottom" constant="47" id="Pib-e2-fPq"/>
+                            <constraint firstItem="OGP-RG-aDC" firstAttribute="top" secondItem="VAP-wl-S8A" secondAttribute="bottom" constant="18" id="gqP-S5-rin"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="pressedLabel" destination="OGP-RG-aDC" id="Ogp-N8-FEq"/>
