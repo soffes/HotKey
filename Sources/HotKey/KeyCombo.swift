@@ -26,9 +26,9 @@ public struct KeyCombo {
 		}
 	}
 
-	public var modifiers: NSEventModifierFlags {
+	public var modifiers: NSEvent.ModifierFlags {
 		get {
-			return NSEventModifierFlags(carbonFlags: carbonModifiers)
+			return NSEvent.ModifierFlags(carbonFlags: carbonModifiers)
 		}
 
 		set {
@@ -48,7 +48,7 @@ public struct KeyCombo {
 		self.carbonModifiers = carbonModifiers
 	}
 
-	public init(key: Key, modifiers: NSEventModifierFlags) {
+	public init(key: Key, modifiers: NSEvent.ModifierFlags) {
 		self.carbonKeyCode = key.carbonKeyCode
 		self.carbonModifiers = modifiers.carbonFlags
 	}

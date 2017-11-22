@@ -41,7 +41,7 @@ public final class HotKey {
 		self.init(keyCombo: keyCombo, keyDownHandler: keyDownHandler, keyUpHandler: keyUpHandler)
 	}
 
-	public convenience init(key: Key, modifiers: NSEventModifierFlags, keyDownHandler: Handler? = nil, keyUpHandler: Handler? = nil) {
+	public convenience init(key: Key, modifiers: NSEvent.ModifierFlags, keyDownHandler: Handler? = nil, keyUpHandler: Handler? = nil) {
 		let keyCombo = KeyCombo(key: key, modifiers: modifiers)
 		self.init(keyCombo: keyCombo, keyDownHandler: keyDownHandler, keyUpHandler: keyUpHandler)
 	}

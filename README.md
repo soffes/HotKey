@@ -2,12 +2,30 @@
 
 [![Version](https://img.shields.io/github/release/soffes/HotKey.svg)](https://github.com/soffes/HotKey/releases)
 [![Build Status](https://travis-ci.org/soffes/HotKey.svg?branch=master)](https://travis-ci.org/soffes/HotKey)
-![Swift Version](https://img.shields.io/badge/swift-3.1-orange.svg)
+![Swift Version](https://img.shields.io/badge/swift-4.0-orange.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Simple global shortcuts in macOS. HotKey wraps the Carbon APIs for dealing with global hot keys to make it easy to use in Swift.
 
 **HotKey, along with [Color](https://github.com/soffes/Color), were created for use in [Contrast](https://usecontrast.com),a macOS app for checking designs for accessible color combinations.**
+
+## Installation
+
+### Carthage
+
+For installation with [Carthage](https://github.com/carthage/carthage), simply add the following to your `Cartfile`:
+
+``` ruby
+github "soffes/HotKey"
+```
+
+### Swift Package Manager
+
+For installation with [Swift Package Manager](https://github.com/apple/swift-package-manager), simply add the following to your `Package.swift`:
+
+``` swift
+.package(url: "https://github.com/soffes/HotKey", from: "0.1.0")
+```
 
 
 ## Usage
@@ -25,7 +43,7 @@ Now you can set the `keyDownHandler` and get callbacks for when your hot key is 
 
 ```swift
 hotKey.keyDownHandler = {
-	print("Pressed at \(Date())")
+  print("Pressed at \(Date())")
 }
 ```
 

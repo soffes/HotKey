@@ -9,7 +9,7 @@
 import AppKit
 import Carbon
 
-extension NSEventModifierFlags {
+extension NSEvent.ModifierFlags {
 	public var carbonFlags: UInt32 {
 		var carbonFlags: UInt32 = 0
 
