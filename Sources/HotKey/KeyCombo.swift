@@ -21,8 +21,7 @@ public struct KeyCombo {
 		}
 
 		set {
-			guard let key = newValue else { return }
-			carbonKeyCode = key.carbonKeyCode
+			carbonKeyCode = newValue?.carbonKeyCode ?? 0
 		}
 	}
 
@@ -37,18 +36,18 @@ public struct KeyCombo {
 	}
 
 	public var isValid: Bool {
-		return carbonKeyCode >= 0 && carbonModifiers > 0
+		return carbonKeyCode >= 0
 	}
 
 
 	// MARK: - Initializers
 
-	public init(carbonKeyCode: UInt32, carbonModifiers: UInt32) {
+	public init(carbonKeyCode: UInt32, carbonModifiers: UInt32 = 0) {
 		self.carbonKeyCode = carbonKeyCode
 		self.carbonModifiers = carbonModifiers
 	}
 
-	public init(key: Key, modifiers: NSEvent.ModifierFlags) {
+	public init(key: Key, modifiers: NSEvent.ModifierFlags = []) {
 		self.carbonKeyCode = key.carbonKeyCode
 		self.carbonModifiers = modifiers.carbonFlags
 	}
