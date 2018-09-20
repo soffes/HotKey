@@ -39,7 +39,7 @@ pod 'HotKey'
 
 ## Usage
 
-Simply initlaize a `HotKey` with a key and modifiers:
+Simply initialize a `HotKey` with a key and modifiers:
 
 ```swift
 // Setup hot key for ⌥⌘R
