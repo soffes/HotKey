@@ -1,7 +1,7 @@
 os:
   - osx
 language: swift
-osx_image: xcode9
+osx_image: xcode10.1
 script:
   - swift build
   - swift test
