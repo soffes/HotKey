@@ -9,6 +9,6 @@ Pod::Spec.new do |spec|
 
   spec.osx.deployment_target = '10.9'
 
-  spec.frameworks = 'Appkit', 'Carbon'
+  spec.frameworks = 'AppKit', 'Carbon'
   spec.source_files = 'Sources/HotKey/**/*.{h,m,swift}'
 end
