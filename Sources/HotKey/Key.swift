@@ -1,11 +1,3 @@
-//
-//  Key.swift
-//  HotKey
-//
-//  Created by Sam Soffes on 7/21/17.
-//  Copyright © 2017 Sam Soffes. All rights reserved.
-//
-
 import Carbon
 
 public enum Key {

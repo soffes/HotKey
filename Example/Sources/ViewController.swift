@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Example
-//
-//  Created by Sam Soffes on 7/21/17.
-//  Copyright © 2017 Sam Soffes. All rights reserved.
-//
-
 import AppKit
 import HotKey
 import Carbon
