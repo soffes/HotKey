@@ -25,7 +25,7 @@ github "soffes/HotKey"
 For installation with [Swift Package Manager](https://github.com/apple/swift-package-manager), simply add the following to your `Package.swift`:
 
 ``` swift
-.package(url: "https://github.com/soffes/HotKey", from: "0.1.0")
+.package(url: "https://github.com/soffes/HotKey", from: "0.1.2")
 ```
 
 ### CocoaPods
