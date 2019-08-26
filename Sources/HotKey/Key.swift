@@ -175,10 +175,10 @@ public enum Key {
 		case "minus", "-": self = .minus
 		case "eight", "8": self = .eight
 		case "zero", "0": self = .zero
-		case "rightBracket": self = .rightBracket
+		case "rightBracket", "]": self = .rightBracket
 		case "o": self = .o
 		case "u": self = .u
-		case "leftBracket": self = .leftBracket
+		case "leftBracket", "[": self = .leftBracket
 		case "i": self = .i
 		case "p": self = .p
 		case "l": self = .l
