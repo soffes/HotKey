@@ -1,0 +1,11 @@
+name: CI
+on: [push]
+jobs:
+  test:
+    name: Test
+    runs-on: macOS-10.14
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v1
+      - name: 'Run tests'
+        run: swift test
