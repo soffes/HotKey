@@ -7,7 +7,6 @@ public final class HotKey {
 
 	public typealias Handler = () -> Void
 
-	
 	// MARK: - Properties
 
 	let identifier = UUID()
@@ -24,7 +23,6 @@ public final class HotKey {
             }
         }
     }
-
 
 	// MARK: - Initializers
 

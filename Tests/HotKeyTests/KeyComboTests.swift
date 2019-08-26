@@ -13,4 +13,9 @@ final class KeyComboTests: XCTestCase {
 		XCTAssertEqual(keyCombo.key, keyCombo2.key)
 		XCTAssertEqual(keyCombo.modifiers, keyCombo2.modifiers)
 	}
+
+    func testDescription() {
+        XCTAssertEqual("⌘C", KeyCombo(key: .c, modifiers: .command).description)
+        XCTAssertEqual("⌃⌥⇧⌘C", KeyCombo(key: .c, modifiers: [.command, .shift, .control, .option]).description)
+    }
 }

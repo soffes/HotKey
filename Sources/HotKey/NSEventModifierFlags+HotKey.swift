@@ -44,3 +44,27 @@ extension NSEvent.ModifierFlags {
 		}
 	}
 }
+
+extension NSEvent.ModifierFlags: CustomStringConvertible {
+    public var description: String {
+        var output = ""
+
+        if contains(.control) {
+            output += Key.control.description
+        }
+
+        if contains(.option) {
+            output += Key.option.description
+        }
+
+        if contains(.shift) {
+            output += Key.shift.description
+        }
+
+        if contains(.command) {
+            output += Key.command.description
+        }
+
+        return output
+    }
+}

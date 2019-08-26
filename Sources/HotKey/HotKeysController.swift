@@ -17,7 +17,6 @@ final class HotKeysController {
 		}
 	}
 
-
 	// MARK: - Properties
 
 	static var hotKeys = [UInt32: HotKeyBox]()
@@ -38,7 +37,6 @@ final class HotKeysController {
 	]
 
 	private static var eventHandler: EventHandlerRef?
-
 
 	// MARK: - Registration
 
@@ -181,7 +179,6 @@ final class HotKeysController {
 		return nil
 	}
 }
-
 
 private func hotKeyEventHandler(eventHandlerCall: EventHandlerCallRef?, event: EventRef?, userData: UnsafeMutableRawPointer?) -> OSStatus {
 	return HotKeysController.handleCarbonEvent(event)
