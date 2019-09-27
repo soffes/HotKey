@@ -5,7 +5,7 @@ extension KeyCombo {
     /// All system key combos
     ///
     /// - returns: array of key combos
-    static func systemKeyCombos() -> [KeyCombo] {
+    public static func systemKeyCombos() -> [KeyCombo] {
         var unmanagedGlobalHotkeys: Unmanaged<CFArray>?
         guard CopySymbolicHotKeys(&unmanagedGlobalHotkeys) == noErr,
             let globalHotkeys = unmanagedGlobalHotkeys?.takeRetainedValue() else
@@ -33,7 +33,7 @@ extension KeyCombo {
     /// All key combos in the application’s main window
     ///
     /// - returns: array of key combos
-    static func mainMenuKeyCombos() -> [KeyCombo] {
+    public static func mainMenuKeyCombos() -> [KeyCombo] {
         guard let menu = NSApp.mainMenu else {
             return []
         }
@@ -46,7 +46,7 @@ extension KeyCombo {
     /// - parameter menu: menu to search
     ///
     /// - returns: array of key combos
-    static func keyCombos(in menu: NSMenu) -> [KeyCombo] {
+    public static func keyCombos(in menu: NSMenu) -> [KeyCombo] {
         var keyCombos = [KeyCombo]()
 
         for item in menu.items {
@@ -65,7 +65,7 @@ extension KeyCombo {
     /// Standard application key combos
     ///
     /// - returns: array of key combos
-    static func standardKeyCombos() -> [KeyCombo] {
+    public static func standardKeyCombos() -> [KeyCombo] {
         return [
             // Application
             KeyCombo(key: .comma, modifiers: .command),
