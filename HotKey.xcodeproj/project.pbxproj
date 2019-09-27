@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21739E66233E992B00F3A8EF /* KeyCombo+System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21739E65233E992B00F3A8EF /* KeyCombo+System.swift */; };
 		21887E401F2209DE00A05579 /* HotKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21887E361F2209DE00A05579 /* HotKey.framework */; };
 		21887E8B1F22156900A05579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21887E841F22156900A05579 /* AppDelegate.swift */; };
 		21887E8C1F22156900A05579 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21887E851F22156900A05579 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		21739E65233E992B00F3A8EF /* KeyCombo+System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyCombo+System.swift"; sourceTree = "<group>"; };
 		21887E361F2209DE00A05579 /* HotKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HotKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21887E3F1F2209DE00A05579 /* HotKeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotKeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21887E661F22154600A05579 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,11 +179,12 @@
 		219E0D0D1FC5E8AB00F80DF1 /* HotKey */ = {
 			isa = PBXGroup;
 			children = (
-				219E0D0E1FC5E8AB00F80DF1 /* NSEventModifierFlags+HotKey.swift */,
-				219E0D0F1FC5E8AB00F80DF1 /* KeyCombo.swift */,
-				219E0D101FC5E8AB00F80DF1 /* Key.swift */,
-				219E0D111FC5E8AB00F80DF1 /* HotKeysController.swift */,
 				219E0D121FC5E8AB00F80DF1 /* HotKey.swift */,
+				219E0D111FC5E8AB00F80DF1 /* HotKeysController.swift */,
+				219E0D101FC5E8AB00F80DF1 /* Key.swift */,
+				219E0D0F1FC5E8AB00F80DF1 /* KeyCombo.swift */,
+				21739E65233E992B00F3A8EF /* KeyCombo+System.swift */,
+				219E0D0E1FC5E8AB00F80DF1 /* NSEventModifierFlags+HotKey.swift */,
 			);
 			path = HotKey;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				219E0D1B1FC5E8AB00F80DF1 /* Key.swift in Sources */,
+				21739E66233E992B00F3A8EF /* KeyCombo+System.swift in Sources */,
 				219E0D1C1FC5E8AB00F80DF1 /* HotKeysController.swift in Sources */,
 				219E0D1A1FC5E8AB00F80DF1 /* KeyCombo.swift in Sources */,
 				219E0D191FC5E8AB00F80DF1 /* NSEventModifierFlags+HotKey.swift in Sources */,
