@@ -23,7 +23,7 @@ public struct KeyCombo: Equatable {
 		}
 
 		set {
-			carbonModifiers = modifiers.carbonFlags
+			carbonModifiers = newValue.carbonFlags
 		}
 	}
 
