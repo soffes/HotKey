@@ -1,3 +1,4 @@
+#if canImport(Carbon)
 import Carbon
 
 public enum Key {
@@ -606,3 +607,4 @@ extension Key: CustomStringConvertible {
         }
     }
 }
+#endif  // canImport(Carbon)

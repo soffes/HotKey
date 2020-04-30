@@ -1,3 +1,4 @@
+#if canImport(AppKit) && canImport(Carbon)
 import AppKit
 import Carbon
 
@@ -68,3 +69,4 @@ extension NSEvent.ModifierFlags: CustomStringConvertible {
         return output
     }
 }
+#endif // canImport(AppKit) && canImport(Carbon)

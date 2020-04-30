@@ -1,3 +1,4 @@
+#if canImport(Carbon)
 import Carbon
 
 final class HotKeysController {
@@ -183,3 +184,5 @@ final class HotKeysController {
 private func hotKeyEventHandler(eventHandlerCall: EventHandlerCallRef?, event: EventRef?, userData: UnsafeMutableRawPointer?) -> OSStatus {
 	return HotKeysController.handleCarbonEvent(event)
 }
+
+#endif  // canImport(Carbon)
