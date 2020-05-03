@@ -1,4 +1,4 @@
-#if canImport(Carbon)
+#if !targetEnvironment(macCatalyst) && canImport(Carbon)
 import Carbon
 
 public enum Key {
@@ -607,4 +607,4 @@ extension Key: CustomStringConvertible {
         }
     }
 }
-#endif  // canImport(Carbon)
+#endif  // !targetEnvironment(macCatalyst) && canImport(Carbon)

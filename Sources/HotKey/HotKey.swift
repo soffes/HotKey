@@ -1,4 +1,4 @@
-#if canImport(AppKit) && canImport(Carbon)
+#if !targetEnvironment(macCatalyst) && canImport(AppKit) && canImport(Carbon)
 import AppKit
 import Carbon
 
@@ -49,4 +49,4 @@ public final class HotKey {
 		HotKeysController.unregister(self)
 	}
 }
-#endif  // canImport(AppKit) && canImport(Carbon)
+#endif  // !targetEnvironment(macCatalyst) && canImport(AppKit) && canImport(Carbon)

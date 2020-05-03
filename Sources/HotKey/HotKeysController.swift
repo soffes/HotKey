@@ -1,4 +1,4 @@
-#if canImport(Carbon)
+#if !targetEnvironment(macCatalyst) && canImport(Carbon)
 import Carbon
 
 final class HotKeysController {
@@ -185,4 +185,4 @@ private func hotKeyEventHandler(eventHandlerCall: EventHandlerCallRef?, event: E
 	return HotKeysController.handleCarbonEvent(event)
 }
 
-#endif  // canImport(Carbon)
+#endif  // !targetEnvironment(macCatalyst) && canImport(Carbon)
