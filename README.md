@@ -60,6 +60,7 @@ You can also implement `hotKey.keyUpHandler` if you’d like.
 
 You don’t need to think about when handlers are registered and unregistered. This all happens automatically based on the `HotKey` object’s lifecycle.
 
+You should not initialize the hotkey as a local variable inside of a function (ex. applicationDidFinishLaunching) it will get deallocated once the function has finished, declare as a class/struct variable somewhere you know it won't get garbage collected (AppDelegate is fine).
 
 ## Thanks
 
