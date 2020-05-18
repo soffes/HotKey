@@ -60,7 +60,7 @@ You can also implement `hotKey.keyUpHandler` if you’d like.
 
 You don’t need to think about when handlers are registered and unregistered. This all happens automatically based on the `HotKey` object’s lifecycle.
 
-You should not initialize the hotkey as a local variable inside of a function (ex. applicationDidFinishLaunching) it will get de-allocated by ARC at compile time, declare as a class/struct variable.
+You should not initialize the hotkey as a local variable inside of a function (ex. applicationDidFinishLaunching) it will get de-allocated by ARC at compile time, declare as a class/struct variable on an instance you know won't be de-allocated.
 
 ## Thanks
 
