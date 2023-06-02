@@ -1,24 +1,12 @@
 # HotKey
 
 [![Version](https://img.shields.io/github/release/soffes/HotKey.svg)](https://github.com/soffes/HotKey/releases)
-[![Build Status](https://github.com/soffes/HotKey/workflows/Tests/badge.svg)](https://github.com/soffes/HotKey/actions)
-![Swift Version](https://img.shields.io/badge/swift-5.0.1-orange.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/HotKey.svg)](https://cocoapods.org/pods/HotKey)
 
 Simple global shortcuts in macOS. HotKey wraps the Carbon APIs for dealing with global hot keys to make it easy to use in Swift.
 
-**HotKey, along with [Color](https://github.com/soffes/Color), were created for use in [Contrast](https://usecontrast.com), a macOS app for checking designs for accessible color combinations.**
-
 ## Installation
-
-### Carthage
-
-For installation with [Carthage](https://github.com/carthage/carthage), simply add the following to your `Cartfile`:
-
-``` ruby
-github "soffes/HotKey"
-```
 
 ### Swift Package Manager
 
@@ -28,6 +16,14 @@ For installation with [Swift Package Manager](https://github.com/apple/swift-pac
 .package(url: "https://github.com/soffes/HotKey", from: "0.1.2")
 ```
 
+### Carthage
+
+For installation with [Carthage](https://github.com/carthage/carthage), simply add the following to your `Cartfile`:
+
+``` ruby
+github "soffes/HotKey"
+```
+
 ### CocoaPods
 
 For installation with [CocoaPods](http://cocoapods.org), simply add the following to your `Podfile`:
@@ -35,7 +31,6 @@ For installation with [CocoaPods](http://cocoapods.org), simply add the followin
 ```ruby
 pod 'HotKey'
 ```
-
 
 ## Usage
 
@@ -59,7 +54,6 @@ hotKey.keyDownHandler = {
 You can also implement `hotKey.keyUpHandler` if you’d like.
 
 You don’t need to think about when handlers are registered and unregistered. This all happens automatically based on the `HotKey` object’s lifecycle.
-
 
 ## Thanks
 
