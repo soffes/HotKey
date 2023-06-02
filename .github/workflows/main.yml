@@ -3,9 +3,10 @@ on: [push]
 jobs:
   test:
     name: Test
-    runs-on: macOS-10.14
+    runs-on: macOS-13
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v1
-      - name: 'Run tests'
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run tests
         run: swift test
