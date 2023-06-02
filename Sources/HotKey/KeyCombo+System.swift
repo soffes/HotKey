@@ -1,3 +1,4 @@
+#if !targetEnvironment(macCatalyst) && canImport(AppKit) && canImport(Carbon)
 import AppKit
 import Carbon
 
@@ -129,3 +130,4 @@ extension KeyCombo {
         ]
     }
 }
+#endif  // !targetEnvironment(macCatalyst) && canImport(AppKit) && canImport(Carbon)

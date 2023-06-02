@@ -1,3 +1,4 @@
+#if !targetEnvironment(macCatalyst) && canImport(AppKit) && canImport(Carbon)
 import AppKit
 import Carbon
 
@@ -68,3 +69,4 @@ extension NSEvent.ModifierFlags: CustomStringConvertible {
         return output
     }
 }
+#endif // !targetEnvironment(macCatalyst) && canImport(AppKit) && canImport(Carbon)

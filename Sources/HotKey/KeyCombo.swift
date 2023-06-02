@@ -1,3 +1,4 @@
+#if !targetEnvironment(macCatalyst) && canImport(AppKit)
 import AppKit
 
 public struct KeyCombo: Equatable {
@@ -80,3 +81,4 @@ extension KeyCombo: CustomStringConvertible {
         return output
     }
 }
+#endif  // !targetEnvironment(macCatalyst) && canImport(AppKit)
