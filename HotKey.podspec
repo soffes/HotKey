@@ -8,6 +8,7 @@ Pod::Spec.new do |spec|
   spec.license = { :type => 'MIT', :file => 'LICENSE' }
 
   spec.osx.deployment_target = '10.13'
+  spec.swift_version = '5.0'
 
   spec.frameworks = 'AppKit', 'Carbon'
   spec.source_files = 'Sources/HotKey/**/*.{h,m,swift}'
