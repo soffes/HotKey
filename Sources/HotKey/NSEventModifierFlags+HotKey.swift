@@ -69,4 +69,4 @@ extension NSEvent.ModifierFlags: CustomStringConvertible {
         return output
     }
 }
-#endif // !targetEnvironment(macCatalyst) && canImport(AppKit) && canImport(Carbon)
+#endif

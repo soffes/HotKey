@@ -607,4 +607,4 @@ extension Key: CustomStringConvertible {
         }
     }
 }
-#endif  // !targetEnvironment(macCatalyst) && canImport(Carbon)
+#endif

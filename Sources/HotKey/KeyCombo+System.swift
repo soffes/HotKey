@@ -130,4 +130,4 @@ extension KeyCombo {
         ]
     }
 }
-#endif  // !targetEnvironment(macCatalyst) && canImport(AppKit) && canImport(Carbon)
+#endif

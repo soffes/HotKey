@@ -185,4 +185,4 @@ private func hotKeyEventHandler(eventHandlerCall: EventHandlerCallRef?, event: E
 	return HotKeysController.handleCarbonEvent(event)
 }
 
-#endif  // !targetEnvironment(macCatalyst) && canImport(Carbon)
+#endif

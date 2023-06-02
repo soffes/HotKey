@@ -81,4 +81,4 @@ extension KeyCombo: CustomStringConvertible {
         return output
     }
 }
-#endif  // !targetEnvironment(macCatalyst) && canImport(AppKit)
+#endif
