@@ -13,7 +13,7 @@ Simple global shortcuts in macOS. HotKey wraps the Carbon APIs for dealing with 
 For installation with [Swift Package Manager](https://github.com/apple/swift-package-manager), simply add the following to your `Package.swift`:
 
 ``` swift
-.package(url: "https://github.com/soffes/HotKey", from: "0.2.0")
+.package(url: "https://github.com/soffes/HotKey", from: "0.2.1")
 ```
 
 ### Carthage

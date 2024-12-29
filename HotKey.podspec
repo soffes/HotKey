@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'HotKey'
-  spec.version = '0.2.0'
+  spec.version = '0.2.1'
   spec.authors = {'Sam Soffes' => 'sam@soff.es'}
   spec.homepage = 'https://github.com/soffes/HotKey'
   spec.summary = 'Simple global shortcuts in macOS.'
