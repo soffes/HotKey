@@ -261,7 +261,7 @@ public enum Key {
 		case "rightarrow", "→": self = .rightArrow
 		case "downarrow", "↓": self = .downArrow
 		case "uparrow", "↑": self = .upArrow
-        case "section", "§": self = .section
+		case "section", "§": self = .section
 		default: return nil
 		}
 	}
@@ -381,11 +381,11 @@ public enum Key {
 		case UInt32(kVK_RightArrow): self = .rightArrow
 		case UInt32(kVK_DownArrow): self = .downArrow
 		case UInt32(kVK_UpArrow): self = .upArrow
-        case UInt32(kVK_ISO_Section): self = .section
+		case UInt32(kVK_ISO_Section): self = .section
 		default: return nil
 		}
 	}
-	
+
 	public var carbonKeyCode: UInt32 {
 		switch self {
 		case .a: return UInt32(kVK_ANSI_A)
@@ -501,7 +501,7 @@ public enum Key {
 		case .rightArrow: return UInt32(kVK_RightArrow)
 		case .downArrow: return UInt32(kVK_DownArrow)
 		case .upArrow: return UInt32(kVK_UpArrow)
-        case .section: return UInt32(kVK_ISO_Section)
+		case .section: return UInt32(kVK_ISO_Section)
 		}
 	}
 }
